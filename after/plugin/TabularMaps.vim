@@ -69,5 +69,13 @@ AddTabularPattern! pascal_assign /:=/l1
 
 AddTabularPattern! trailing_c_comments /\/\*\|\*\/\|\/\//l1
 
+AddTabularPattern! equals       /^[^=]*\zs=/
+
+AddTabularPattern! ruby_hash    /^[^=>]*\zs=>/
+
+AddTabularPattern! commas       /,\s*\zs\s/l0
+
+AddTabularPattern! colons       /^[^:]*:\s*\zs\s/l0
+
 let &cpo = s:save_cpo
 unlet s:save_cpo
